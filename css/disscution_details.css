@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --teal-primary: #008080;
+  --teal-dark: #006666;
+  --teal-light: #e6f3f3;
+  --teal-hover: #007070;
+  --teal-super-light: #f0f7f7;
+  --text-primary: #1c1e21;
+  --text-secondary: #65676b;
+  --border-color: #e4e6eb;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --animate-duration: 0.3s;
+  --animate-timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--teal-super-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Left Column Styles */
+.left-column {
+  flex: 0 0 45%;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+/* Discussion Topic Styles */
+.discussion-topic {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--teal-light);
+  transition: transform var(--animate-duration) var(--animate-timing), box-shadow var(--animate-duration) var(--animate-timing);
+  transform: translateY(0);
+}
+
+.discussion-topic:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.discussion-topic h1 {
+  color: var(--teal-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.topic-metadata {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--teal-light);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--teal-light);
+}
+
+.author-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.author-name {
+  font-weight: 700; /* Increased font weight for better emphasis */
+  color: var(--teal-primary);
+  font-size: 1rem; /* Adjusted font size for better readability */
+}
+
+.post-date {
+  color: var(--text-secondary);
+  font-size: 0.775rem; /* Adjusted font size for better readability */
+  font-style: italic; /* Added italic style for differentiation */
+  margin-top: 0.2rem; /* Added margin for spacing */
+}
+
+.topic-stats {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 1rem;
+  background: var(--teal-super-light);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.topic-content {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.topic-footer {
+  border-top: 2px solid var(--teal-light);
+  padding-top: 1rem;
+}
+
+/* Right Column Styles */
+.right-column {
+  flex: 0 0 55%;
+}
+
+/* Comments Section Styles */
+.comments-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--teal-light);
+  scroll-behavior: smooth;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: var(--teal-light);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.comment-header h2 {
+  font-size: 1.2rem;
+  color: var(--teal-primary);
+}
+
+/* Add this to your existing CSS */
+.comment-date {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.8rem; /* Adjusted font size for better readability */
+  margin-top: 0.2rem; /* Added margin for spacing */
+}
+
+.comment-date .dot {
+  height: 6px;
+  width: 6px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.sort-comments {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--teal-primary);
+  border-radius: 4px;
+  color: var(--teal-primary);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.sort-comments:hover {
+  background: var(--teal-light);
+}
+
+/* Add Comment Box Styles */
+.add-comment-box {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--teal-light);
+  margin-bottom: 1.5rem;
+}
+
+.add-comment-box h3 {
+  margin-bottom: 1rem;
+  color: var(--teal-primary);
+}
+
+.comment-input-wrapper {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--teal-light);
+  border-radius: 8px;
+  resize: none;
+  min-height: 120px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--teal-primary);
+  background: var(--teal-super-light);
+}
+
+.post-btn {
+  background-color: var(--teal-primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-btn:hover {
+  background-color: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.post-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: ripple 1s infinite;
+}
+
+@keyframes ripple {
+  to {
+    left: 100%;
+  }
+}
+
+/* Comments List Styles */
+.comment {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--teal-light);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.comment:hover {
+  background-color: var(--teal-super-light);
+}
+
+.comment.new-comment {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-content {
+  margin: 0.8rem 0;
+  line-height: 1.8;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--teal-light);
+  color: var(--teal-primary);
+}
+
+.interaction-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.interaction-buttons button {
+  transform: scale(1);
+  transition: all 0.2s var(--animate-timing);
+}
+
+/* Like button states */
+.like-btn.active {
+  color: #e91e63;
+  background-color: rgba(233, 30, 99, 0.1);
+}
+
+.like-btn.active i {
+  color: #e91e63;
+}
+
+.like-btn.active .count {
+  color: #e91e63;
+}
+
+/* Share button states */
+.share-btn {
+  transition: transform 0.2s ease;
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+}
+
+.share-btn.shared {
+  color: var(--teal-primary);
+  background-color: var(--teal-light);
+}
+
+.share-btn.shared i {
+  color: var(--teal-primary);
+}
+
+.share-btn.shared .count {
+  color: var(--teal-primary);
+  font-weight: 500;
+}
+
+.share-btn.pulse {
+  animation: pulseAnimation 0.4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@keyframes pulseAnimation {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Share button states */
+.share-btn.shared {
+  color: var(--teal-primary);
+  background-color: var(--teal-light);
+}
+
+.share-btn.shared i {
+  color: var(--teal-primary);
+}
+
+.share-btn.shared .count {
+  color: var(--teal-primary);
+}
+
+/* View count states */
+.view-count.viewed {
+  color: var(--teal-primary);
+  background-color: var(--teal-light);
+}
+
+.view-count.viewed i {
+  color: var(--teal-primary);
+}
+
+.view-count.viewed span {
+  color: var(--teal-primary);
+  font-weight: 600;
+}
+
+.interaction-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.interaction-buttons button:active {
+  transform: scale(0.95);
+}
+
+.like-btn .count {
+  color: var(--teal-primary);
+  font-weight: 500;
+}
+
+.eye-btn {
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.eye-btn:hover {
+  transform: scale(1.1);
+  color: var(--teal-primary);
+}
+
+.eye-btn .count {
+  color: var(--teal-primary);
+  font-weight: 500;
+}
+
+/* Update eye button styles - add before the @media queries */
+.view-count {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.view-count i {
+  transition: transform 0.2s ease;
+}
+
+.view-count:hover {
+  color: var(--teal-primary);
+}
+
+.view-count:hover i {
+  transform: scale(1.1);
+}
+
+.view-count span {
+  color: var(--teal-primary);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    position: static;
+    flex: none;
+    width: 100%;
+  }
+
+  .right-column {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .discussion-topic,
+  .comments-section,
+  .add-comment-box {
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .discussion-topic h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Add fade-in animation for new content */
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add fixed height and scrollbar styles for comments section */
+.comments-list {
+  height: calc(100vh - 250px); /* Adjust based on your header/content height */
+  overflow-y: auto;
+  padding-right: 1rem;
+  position: relative;
+  /* scrollbar-width: thin; */
+  scrollbar-color: var(--teal-primary) var(--gray-200);
+}
+
+.comments-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+  background: var(--teal-light);
+  border-radius: 4px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: var(--teal-primary);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-dark);
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+  .comments-list {
+    height: 60vh;
+    padding-right: 0.5rem;
+  }
+}

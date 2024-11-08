@@ -1,0 +1,213 @@
+/* Enhanced Comment/Answer Styles */
+.comment, .answer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,128,128,0.05);
+  border: 1px solid var(--teal-light);
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.comment:hover, .answer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,128,128,0.1);
+  border-color: var(--teal-primary);
+}
+
+.comment::before, .answer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--teal-primary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.comment:hover::before, .answer:hover::before {
+  transform: scaleY(1);
+}
+
+/* Author Info Animations */
+.author-info {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.comment:hover .author-info, .answer:hover .author-info {
+  transform: translateX(8px);
+}
+
+/* Avatar Enhancement */
+.avatar {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,128,128,0.15);
+}
+
+.comment:hover .avatar, .answer:hover .avatar {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Content Enhancement */
+.comment-content, .answer-content {
+  position: relative;
+  padding: 1rem;
+  background: var(--teal-super-light);
+  border-radius: 8px;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.comment:hover .comment-content, .answer:hover .answer-content {
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,128,128,0.08);
+}
+
+/* Action Buttons Enhancement */
+.comment-actions, .answer-actions {
+  opacity: 0.7;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.comment:hover .comment-actions, .answer:hover .answer-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Like Button Animation */
+.like-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.like-btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,128,128,0.2) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.like-btn:hover::before {
+  transform: scale(2);
+}
+
+.like-btn.liked {
+  animation: likedPop 0.4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@keyframes likedPop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* New Comment/Answer Animation */
+.new-comment, .new-answer {
+  animation: slideInAndFade 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* List Container Enhancements */
+.comments-list, .answers-list {
+  padding: 1rem;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+/* Scrollbar Styling */
+.comments-list::-webkit-scrollbar, .answers-list::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.comments-list::-webkit-scrollbar-thumb, .answers-list::-webkit-scrollbar-thumb {
+  background: var(--teal-primary);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover, .answers-list::-webkit-scrollbar-thumb:hover {
+  background: var(--teal-dark);
+}
+
+/* Empty State Animation */
+.no-comments, .no-answers {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 128, 128, 0.2),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .comments-list, .answers-list {
+    height: 60vh;
+    padding: 0.5rem;
+  }
+  
+  .comment, .answer {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .comment-content, .answer-content {
+    padding: 0.75rem;
+  }
+}

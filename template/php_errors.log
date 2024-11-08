@@ -1,0 +1,58 @@
+[06-Nov-2024 23:05:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getDiscussionInteractions() in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:250
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\discussion_details_handler.php(283): saveDiscussionInteraction(Object(mysqli), 1, 1, 'like')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 250
+[06-Nov-2024 23:06:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getDiscussionInteractions() in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:250
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\discussion_details_handler.php(283): saveDiscussionInteraction(Object(mysqli), 2, 1, 'like')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 250
+[08-Nov-2024 19:51:24 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 19:51:24 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), '41', '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 19:51:39 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 19:51:39 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), '41', '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 19:51:47 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 19:51:47 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), '41', '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 19:51:49 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 19:51:49 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), '41', '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 19:55:17 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 19:55:17 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), '39', '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 22:10:49 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 22:10:49 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), 0, '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 22:10:56 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 22:10:56 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), 0, '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
+[08-Nov-2024 22:11:15 Europe/Berlin] Error in saveDiscussionInteraction: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`))
+[08-Nov-2024 22:11:15 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Failed to execute insert statement: Cannot add or update a child row: a foreign key constraint fails (`community_help_center`.`discussion_interactions`, CONSTRAINT `discussion_interactions_ibfk_2` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`)) in D:\xampp\htdocs\webApp\template\discussion_details_handler.php:248
+Stack trace:
+#0 D:\xampp\htdocs\webApp\template\disscution_details.php(17): saveDiscussionInteraction(Object(mysqli), 0, '1', 'view')
+#1 {main}
+  thrown in D:\xampp\htdocs\webApp\template\discussion_details_handler.php on line 248
